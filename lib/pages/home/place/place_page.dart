@@ -40,18 +40,26 @@ class PlacePage extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              padding: EdgeInsets.only(
-                left: 15,
-                top: 45,
-              ),
-              decoration: BoxDecoration(
-                color: Colors.red,
-                borderRadius: BorderRadius.circular(5)
-              ),
-              child: IconButton(
-                icon: Icon(CupertinoIcons.back,color: Colors.white,),
-                onPressed: () => Navigator.pop(context),
+            Positioned(
+              top: 54,
+              left: 15,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 5,
+                      blurRadius: 7,
+                      offset: Offset(0,5),
+                    )
+                  ],
+                  borderRadius: BorderRadius.circular(50)
+                ),
+                child: IconButton(
+                  icon: Icon(CupertinoIcons.back,color: Colors.black,),
+                  onPressed: () => Navigator.pop(context),
+                ),
               ),
             ),
             Align(
